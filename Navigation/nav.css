@@ -1,0 +1,111 @@
+.navbar {
+  display: flex;
+  background-color: goldenrod;
+  /* overflow: hidden; */
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.logo {
+  font-size: 24px;
+  color: whitesmoke;
+  font-family: "monaco";
+  padding: 10px 20px 5px 20px;
+}
+
+li {
+  float: left;
+  border-right: 1px orangered solid;
+  font-family: "Monaco";
+  font-size: 1rem;
+}
+li a {
+  display: block;
+  color: aquamarine;
+  padding: 15px;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+.programs {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  background-color: tomato;
+  border-radius: 5px;
+  display: none;
+}
+.programs:hover .dropdown {
+  display: block;
+}
+
+/* .navlinks > *:nth-child(5){
+    border-left: 1px orangered solid;
+    float: right;
+} */
+i {
+  color: lightpink;
+}
+a:hover {
+  background-color: darkolivegreen;
+  color: whitesmoke;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.short-menu {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+  color: white;
+}
+
+/* @media screen and (max-width: 768px) {
+  .large-menu {
+    display: none;
+    position: absolute;
+    background-color: tomato;
+    right: 0px;
+    left: 0px;
+    
+  }
+  .short-menu {
+    display: block;
+  }
+  input[type="checkbox"]:checked ~ .large-menu {
+    display: block;
+  }
+ 
+} */
+@media screen and (max-width: 768px) {
+  #sidebar li {
+    width: 100%;
+    text-align: center;
+  }
+  .large-menu {
+    display: none;
+    position: absolute;
+    background-color: tomato;
+    right: 0px;
+    left: 0px;
+  }
+  .short-menu {
+    display: block;
+  }
+  /* .eff {
+    animation-name: sidebar;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes sidebar {
+    0% {
+      display: none;
+    }
+    100% {
+      display: block;
+    }
+  } */
+}

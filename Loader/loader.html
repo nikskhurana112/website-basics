@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .icon{
+            clip-path: polygon(52% 0, 0% 100%, 100% 100%);
+            height: 0px;
+            width: 50px;
+            background-color: blue;
+            animation-name: ani;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+        }
+        .icon2{
+            left: 53%;
+            animation-delay: 200ms;
+            background-color: blueviolet;
+        }
+        .icon3{
+            left: 56%;
+            animation-delay: 400ms;
+            background-color: chocolate;
+        }
+        @keyframes ani {
+            0%{
+                height: 0px;
+            }
+            50%{
+                height: 150px;
+            }
+        }
+        .effect{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="icon"></div>
+    <div class="icon icon2"></div>
+    <div class="icon icon3"></div>
+
+    <div id="modal">
+        Hello World
+    </div>
+
+    <a href="#;" onclick="addClass()">Change Color</a>
+
+    <script>
+        function addClass(){
+            modal.classList.add("effect")
+        }
+    </script>
+</body>
+</html>

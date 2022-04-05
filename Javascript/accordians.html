@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            padding: 50px;
+        }
+        .section{
+            text-align: center;
+        }
+        p{
+            width: 500px;
+            margin: auto;
+            overflow: hidden;
+            height: 0;
+        }
+    
+        .show{
+            height: auto;
+            animation-name: down;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        .hide{
+            overflow: hidden;
+            animation-name: up;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+        button{
+            margin: 0.5rem;
+        }
+        @keyframes down {
+            from{
+                height: 0px;
+            }
+            to{
+                height: 75px;
+            }
+    }
+        @keyframes up {
+            from{
+                height: 75px;
+            }
+            to{
+                height: 0px;
+            }
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="section">
+            <button class="btn">Click Me!</button>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto minus id, nesciunt, similique adipisci, aperiam suscipit harum aspernatur provident repellat est. Recusandae minus iure nam asperiores rem unde possimus vel.</p>
+        </div>
+        <div class="section">
+            <button class="btn">Click Me!</button>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto minus id, nesciunt, similique adipisci, aperiam suscipit harum aspernatur provident repellat est. Recusandae minus iure nam asperiores rem unde possimus vel.</p>
+        </div>
+        <div class="section">
+            <button class="btn">Click Me!</button>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto minus id, nesciunt, similique adipisci, aperiam suscipit harum aspernatur provident repellat est. Recusandae minus iure nam asperiores rem unde possimus vel.</p>
+        </div>
+        <div class="section">
+            <button class="btn">Click Me!</button>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto minus id, nesciunt, similique adipisci, aperiam suscipit harum aspernatur provident repellat est. Recusandae minus iure nam asperiores rem unde possimus vel.</p>
+        </div>
+        <div class="section">
+            <button class="btn">Click Me!</button>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto minus id, nesciunt, similique adipisci, aperiam suscipit harum aspernatur provident repellat est. Recusandae minus iure nam asperiores rem unde possimus vel.</p>
+        </div>
+    </div>
+    <script>
+        
+        let btns = document.querySelectorAll('.btn');
+        let content = document.querySelectorAll('.section p');
+
+
+        for(let i = 0; i < btns.length; i++){
+            btns[i].addEventListener("click", myTabs);
+        }
+
+        function myTabs(){
+            let item = this.nextElementSibling.classList;
+
+            
+
+            for(let y = 0; y < content.length; y++){
+                if(content[y].classList.contains("show")){
+                    content[y].classList.remove("show");
+                    content[y].classList.add("hide");
+                }
+                else if(content[y].classList.contains("hide")){
+                    content[y].classList.remove("hide");
+                }
+                
+            }
+
+            if(!item.contains("show") && !item.contains('hide')){
+                item.add('show');
+            }
+
+        }
+    </script>
+</body>
+</html>

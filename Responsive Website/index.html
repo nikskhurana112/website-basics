@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 30%;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-color: red;
+            height: 100%;
+            transition: 2s;
+        }
+        .box2{
+            transition: 2s;
+            width: 100%;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            background-color: blue;
+            height: 100%;
+        }
+        .bx1{
+            width: 30%;
+        }
+        .bx2{
+            width: 70%;
+        }
+        button{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+        .container{
+            position: relative;
+            width: 1200px;
+            margin: auto;
+            height: 720px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="b1" class="box1">
+            <ul>
+                <li><a href="">Hello</a></li>
+            </ul>
+        </div>
+        <div id="b2" class="box2"></div>
+        <button onclick="changewi()">Click Me</button>
+    </div>
+    <script>
+        let i = 0;
+        function changewi(){
+            if(i==0){
+                b1.classList.add("bx1");
+                b2.classList.add("bx2");
+                i=1;
+            }else{
+                b1.classList.remove("bx1");
+                b2.classList.remove("bx2");
+                i=0;
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+}
+nav ul {
+  display: inline-block;
+}
+nav li {
+  list-style-type: none;
+  float: left;
+  text-align: center;
+  border: 1px dashed palegoldenrod;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+}
+nav ul li {
+  position: relative;
+}
+nav ul ul li {
+  width: 150px;
+  position: relative;
+  left: 30px;
+}
+nav ul ul {
+  height: 0;
+  width: 300px;
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
+  position: absolute;
+  left: -30px;
+  top: 60px;
+}
+
+.hasDropdown {
+  height: 42px;
+}
+
+.show {
+  animation: down 2s ease;
+  animation-fill-mode: forwards;
+}
+.hide {
+  animation: dropDownUp 1s ease;
+}
+nav ul ul li {
+  float: unset;
+  background-color: plum;
+  border: 2px solid goldenrod;
+  border-radius: 2.5rem;
+  margin: 2px;
+}
+
+nav ul ul li a {
+  color: white;
+}
+
+.show li:nth-child(odd) {
+  animation: dropDownEffectLeft 1s ease;
+}
+.show li:nth-child(even) {
+  animation: dropDownEffectRight 1s ease;
+}
+
+@keyframes down {
+  from {
+    height: 0;
+  }
+  to {
+    height: 277px;
+  }
+}
+
+@keyframes dropDownEffectLeft {
+  from {
+    transform: translateX(-40px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes dropDownEffectRight {
+  from {
+    transform: translateX(40px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes dropDownUp {
+  from {
+    height: 227px;
+  }
+  to {
+    height: 0px;
+  }
+}

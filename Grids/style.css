@@ -1,0 +1,33 @@
+.myGrid{
+    width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    /* grid-row-gap: 20px;
+    grid-column-gap: 20px; */
+    grid-gap: 20px;
+}
+.myGrid div{
+    padding: 30px;
+    background-color:brown ;
+}
+.myGridCol{
+    /* 
+    grid-column-start: 1;
+    grid-column-end:-1; 
+    grid-column: 1/span 2;
+    */
+    
+    /* 
+    grid-row-start: 1;
+    grid-row-end: 4; 
+    */
+
+    /* 
+    grid-row:1/4; 
+    */
+
+    grid-area: 1 / 1 / 3 / 3;
+}

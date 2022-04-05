@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box, #box2{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -800%);
+        text-align: center;
+        
+    }
+    .animate{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);    
+    }
+    .animate2{
+        position: absolute;
+        right: 0;
+        top: 40%;
+        transform: translateY(-60%) rotate(90deg);
+    }
+    .effect{
+        animation: toggle 2s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+    .effect2{
+        animation: toggle2 2s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes toggle {
+        0%{
+            transform: translate(-50%, -800%);
+        }
+        100%{
+            transform: translate(-50%, -50%);
+        }
+    }
+    @keyframes toggle2 {
+        0%{
+            transform: translate(-50%, -50%);
+        }
+        100%{
+            transform: translate(-50%, -800%);
+        }
+    }
+
+</style>
+<body>
+    <div id="box">
+        <label for="">UserName: </label>
+        <input type="text">
+        <br>
+        <label for="">Password: </label>
+        <input type="text">
+        <br>
+        <button>Submit</button>
+    </div>
+    <div id="box2">
+        <label for="">Name: </label>
+        <input type="text">
+        <br>
+        <label for="">Age: </label>
+        <input type="text">
+        <br>
+        <label for="">Phone Number: </label>
+        <input type="text">
+        <br>
+        <label for="">Password: </label>
+        <input type="text">
+        <br>
+        <button>Submit</button>
+    </div>
+    <div class="animate">
+        <button onclick="bringSignIn()">SignIn</button>
+    </div>
+    <div class="animate2">
+        <button onclick="bringSignUp()">SignUp</button>
+    </div>
+
+    <script>
+        let bool = false, bool2 = false;
+        function bringSignIn(){
+            if(bool == false){
+                box.classList.add("effect");
+                box.classList.remove("effect2");
+                if(bool2 == true){
+                    box2.classList.remove("effect");
+                    box2.classList.add("effect2");
+                    bool2 = false;
+                }
+                bool = true;
+            }
+            else{
+                box.classList.add("effect2");
+                box.classList.remove("effect");
+                bool = false;
+            }
+            
+        }
+        function bringSignUp(){
+            if(bool2 == false){
+                box2.classList.add("effect");
+                box2.classList.remove("effect2");
+                if(bool == true){
+                    box.classList.remove("effect");
+                    box.classList.add("effect2");
+                    bool = false;
+                }
+                bool2 = true;
+            }
+            else{
+                box2.classList.add("effect2");
+                box2.classList.remove("effect");
+                bool2 = false;
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

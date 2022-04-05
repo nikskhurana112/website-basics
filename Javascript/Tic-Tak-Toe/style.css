@@ -1,0 +1,38 @@
+
+h3{
+  text-align: center;
+}
+.game{
+  position: relative;
+
+}
+.grid{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px dotted darkslategray;
+  height: 620px;
+  width: 620px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.grid div{
+  width: 200px;
+  height: 200px;
+  border: 3px dotted darkorange;
+}
+
+.player-one{
+  background-image: url(./images/p1.png);
+  background-color: burlywood;
+  background-size:cover;
+}
+
+.player-two{
+  background-image: url(./images/p2.png);
+  background-color: burlywood;
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+}

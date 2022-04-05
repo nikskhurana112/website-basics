@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="slideShow.js">
+    <style>
+        *{
+         box-sizing: border-box;
+        }
+        body{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        }
+     
+
+    </style>
+</head>
+<body>
+
+    <!-- <div class="box" id="sidebar">
+
+    </div> -->
+
+    <!-- <a href="#;" onclick="clickMe()">Click Me</a> -->
+    
+    <nav class="navbar">
+        <div class="logo">Amazing</div>
+        
+        <!--navigation menu-->
+        <ul class="navlinks">
+            <!-- <input type="checkbox" id="checkbox_toggle" /> -->
+            <label onclick="displayMenu()" id="short-menu" class="short-menu">&#9776;</label>
+            <div id="sidebar" class="large-menu">
+                <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
+                <li onclick="displayDropdown()" class="programs"><a href="#programs"><i class="fa fa-spinner"></i> Programs</a>
+                <ul id="dropdown" class="dropdown">
+                    <li><a href="/">Dropdown 1</a></li>
+                    <li><a href="/">Dropdown 2</a></li>
+                    <li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>
+                </ul>
+            </li>
+            <li><a href="#aboutUs"><i class="fa fa-address-card"></i> About Us</a></li>
+            <li><a href="#contactUs"><i class="fa fa-id-badge"></i> Contact Us</a></li>
+            <li><a href="#joinUs"><i class="fa fa-users"></i> Join our Team</a></li>
+        </div>
+        </ul>
+    </nav>
+    <!-- <section>
+        <div class="slider" name="ImageSlider">
+            <img src="slider/nature.jpg" alt="">
+            <img src="slider/taj.jpg" alt="">
+            <img src="slider/s1.jpg" alt="">
+            <img src="slider/s2.jpg" alt="">
+            <img src="slider/s3.jpg" alt="">
+        </div>
+    </section>
+    <section name="SlideShow">
+        <div class="slideshow">
+            <div>
+                <img src="slider/nature.jpg" alt="">
+            </div>
+            <div>
+                <img src="slider/taj.jpg" alt="">
+            </div>
+            <div>
+                <img src="slider/s1.jpg" alt="">
+            </div>
+        </div>
+    </section> -->
+
+    <script>
+        var i = 1;
+        function displayMenu(){
+           if(i == 1){
+            sidebar.style.display = "block";
+            i=0;
+           }else{
+            sidebar.style.display = "none";
+            i=1;
+           }
+        }
+        var j = 1;
+        function displayDropdown(){
+            if(j == 1){
+                dropdown.style.display = "block";
+                j=0;
+            }
+            else{
+                dropdown.style.display = "none";
+                j=1;
+            }
+        }
+    </script>
+</body>
+</html>

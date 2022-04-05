@@ -1,0 +1,42 @@
+/* .c1 {grid-area: one;}
+.c2 {grid-area: two;}
+.c3 {grid-area: three;}
+.c4 {grid-area: four;}
+.c5 {grid-area: five;}
+.c6 {grid-area: six;}
+.c7 {grid-area: seven;}
+.c8 {grid-area: eight;}
+.c9 {grid-area: nine;}
+.c10 {grid-area: ten;}
+.c11 {grid-area: eleven;}
+.c12 {grid-area: twelve;}
+.c13 {grid-area: thirteen;} */
+.myGrid{
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    grid-auto-rows: minmax(200px, auto);
+    /* grid-gap: 20px; */
+    /* grid-template-areas: 
+    'one two three four'
+    'five six six seven'
+    'eight six six nine'
+    'ten eleven twelve thirteen'; */
+}
+.myGrid > div{
+    background-color: aquamarine;
+    padding: 2px;
+}
+.c6{
+    grid-area: 2/2/4/4;
+}
+.myGrid > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    /* width: 200px;
+    height: 200px;
+}
+
+

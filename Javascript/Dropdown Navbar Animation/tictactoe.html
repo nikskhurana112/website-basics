@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 100px;
+        height: 100px;
+        background-color: brown;
+        border: 1px;
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btnOne" onclick="game(this)"></button>
+
+    <script>
+      let i = 0;
+      function game(ins) {
+        if (i == 0) {
+          ins.innerHTML = "X";
+          i = 1;
+
+          btnOne.setAttribute("disabled", "disabled");
+        } else {
+          ins.innerHTML = "O";
+          i = 0;
+        }
+      }
+    </script>
+  </body>
+</html>

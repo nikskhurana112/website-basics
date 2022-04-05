@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+    <style>
+        .grid{
+            width: 800px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-template-areas: 
+            'b a a a a c'
+            'b a a a a c'
+            'b d d d d c'
+            ;
+            grid-gap: 10px;
+        }   
+        .grid div{
+            background-color: brown;
+            padding: 20px;
+        }
+        .a{
+            grid-area: a;
+        }
+        .b{
+            grid-area: b;
+        }
+        .c{
+            grid-area: c;
+        }
+        .d{
+            grid-area: d;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+    </div>
+</body>
+</html>

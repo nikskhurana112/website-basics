@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: absolute;
+            left: 0px;
+            top: 40%;
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            transition: all 500ms;
+            /*transition-delay: 2s;
+            transition-property: width, height;
+            transition-duration: 2s; */
+            animation-name: bike;
+            animation-duration: 2s;
+            /* animation-delay: 2s; */
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        .box:hover{
+            transform: scale(1) rotate(0deg) translate(200px, 200px);
+        }
+
+        @keyframes bike {
+            from{
+                transform: scale(1) rotate(0deg) translateX(0px);
+            }
+            to{
+                transform: scale(2) rotate(0deg) translateX(400px);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <img class="box" src="images/profile1629689891.png" alt="">
+    111
+
+</body>
+</html>

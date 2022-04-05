@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            overflow: hidden;
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+        .bike1{
+            position: absolute;
+            left: -80px;
+            bottom: 10px;
+            width: 420px;
+            height: 300px;
+            z-index: 1;
+            animation-name: bike1;
+            animation-duration: 7s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        .bike2{
+            position: absolute;
+            right: 0px;
+            bottom: 2px;
+            width: 230px;
+            height: 200px;
+            z-index: 2;
+            animation-name: bike2;
+            animation-duration: 7s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;  
+        }
+        .onRoad{
+            position: absolute;
+            bottom: 20px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            object-fit: fill;
+           
+        }
+        .plane{
+            position: absolute;
+            bottom: 45%;
+            left: -100px;
+            width: 200px;
+            height: 200px;
+            object-fit: fill;
+            animation-name: plane;
+            z-index: 2;
+            animation-duration: 10s;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        .cloud{
+            position: absolute;
+            top: -20%;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            object-fit: fill;
+            z-index: 3;
+            animation-name: cloud;
+            animation-duration: 8s;
+            animation-iteration-count: 2;
+            animation-timing-function: ease-in-out;
+        }
+        .tree{
+            position: absolute;
+            bottom: 20px;
+            left: -3px;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            object-fit: fill;
+            z-index: 3;
+            animation-name: tree;
+            animation-duration: 4s;
+            animation-iteration-count: 2;
+            animation-timing-function: ease-in-out;
+        }
+       
+        @keyframes cloud {
+            0%{
+                transform: translateX(0px);
+            }
+            50%{
+                transform: translate(200px);
+            }
+            100%{
+                transform: translate(0px);
+            }
+        }
+        @keyframes plane {
+            from{
+                transform: translate(0px, 0px);
+            }
+            to{
+                transform: translate(2000px, -500px);
+            }
+        }
+        @keyframes bike1{
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(1700px);
+            }
+        }
+        @keyframes bike2{
+            from{
+                transform: translateX(0px);
+            }
+            to{
+                transform: translateX(-1700px);
+            }
+        }
+        
+     
+
+
+    </style>
+</head>
+<body>
+    <img class="bike1" src="bike1.png" alt="This is bike on left">
+    <img class="bike2" src="bike2.png" alt="This is bike on right">
+    <img class="onRoad" src="onroad3.png" alt="This is a plane road">
+    <img class="plane" src="airplane.png" alt="This is flying plane">
+    <img class="cloud" src="cloud.png" alt="This is a moving cloud">
+   
+</body>
+</html>
